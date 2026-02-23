@@ -9,14 +9,14 @@
       <button type="button" @click.once="showInfo">
         Ver tip de uso
       </button>
-      <small v-if="info">{{ info }}</small>
+      <small v-if="tip">{{ tip }}</small>
     </header>
 
-    <BookForm @bookCreated="handleBookCreated" />
+    <BookForm @book-created="handleBookCreated" />
 
     <div class="spacer"></div>
 
-    <BookList :books="books" />
+    <BookList :books="books" @book-deleted="handleBookDeleted"/>
   </section>
 </template>
 
@@ -64,7 +64,9 @@ const books = ref([
 
 ])
 
-const info = ref('')
+function showTip() {
+  tip.value = 'Eventos: BookCard emite -> BookList re-emite -> BooksView filtra.'
+}
 
 function handleBookCreated(book) {
   books.value = [book, ...books.value]
