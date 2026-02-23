@@ -1,25 +1,15 @@
 <template>
-<!--
+
 <section class="card">
-    <h2>Catálogo</h2>
-
-    <p v-if="props.books.length === 0">No hay libros</p>
-    
-    <div v-else class="grid">
-      <BookCard v-for="book in props.books" :key="book.id" :book="book" />
-    </div>
-
-
-  </section>
-  -->
-
-<section class="list">
+<div class="list">
+  <h2>Catálogo</h2>
   <BookCard 
   v-for="book in books"
   :key="book.id"
   :book="book"
   @book-deleted="onBookDeleted"
   />
+</div>
 </section>
 
 </template>
