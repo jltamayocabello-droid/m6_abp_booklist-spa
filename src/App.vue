@@ -27,15 +27,7 @@
     </section>
     </section>
 
-
   </main>
-
-
-
-
-
-
-
 
 </template>
 
@@ -68,6 +60,8 @@ function onNameInput(event) {
   userName.value = event.target.value
 }
 </script>
+
+
 
 <style scoped>
 
