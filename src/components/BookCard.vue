@@ -1,55 +1,48 @@
 <template>
-  <article class="libro" :title="`ID: ${props.libro.id}`">
-    <h3 class="titulo">{{ props.libro.titulo }}</h3>
+  <article class="bookCard" :title="`ID: ${props.book.id}`">
+    <h3 class="title">{{ props.book.title }}</h3>
     <p class="meta">
-      <span class="autor">Autor: {{ props.libro.autor }}</span>
-      <span class="categoria" :class="categoriaClass(props.libro.categoria)"
-        >Categoria: {{ props.libro.categoria }}</span
+      <span class="author">Autor: {{ props.libro.author }}</span>
+      <span class="category" :class="categoryClass(props.book.category)"
+        >Categoria: {{ props.book.category }}</span
       >
     </p>
+
+    <p v-if="props.book.description" class="description">{{ props.book.description }}</p>
   </article>
+
 </template>
 
 <script setup>
 const props = defineProps({
-  libro: {
+  book: {
     type: Object,
     required: true,
   },
 })
+
+function categoryClass(category) {
+  return {
+    fiction: category === 'Ficción',
+    nonFiction: category === 'No Ficción',
+    science: category === 'Ciencia',
+    history: category === 'Historia',
+    dystopia: category === 'Distopía',
+  }
+}
 </script>
 
 <style scoped>
-.libro {
-  padding: 12px;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-}
-.titulo {
-  margin: 0 0 6px;
-}
-.meta {
-  margin: 0;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  color: #374151;
-}
-.categoria {
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: #f3f4f6;
-}
-.categoria.ficcion {
-  background: #ede9fe;
-}
-.categoria.distopia {
-  background: #fee2e2;
-}
-.categoria.historia {
-  background: #e0f2fe;
-}
-.categoria.ciencia {
-  background: #dcfce7;
-}
+.bookCard { padding: 12px; border: 1px solid #e5e7eb; border-radius: 10px; }
+.title { margin: 0 0 6px; }
+.meta { margin: 0; display: flex; gap: 10px; flex-wrap: wrap; color: #374151; }
+.category { padding: 2px 8px; border-radius: 999px; background: #f3f4f6; }
+
+.category.fiction { background: #ede9fe; }
+.category.nonFiction { background: #fef9c3; }
+.category.science { background: #dcfce7; }
+.category.history { background: #e0f2fe; }
+.category.dystopia { background: #fee2e2; }
+
+.description { margin: 10px 0 0; color: #4b5563; }
 </style>
