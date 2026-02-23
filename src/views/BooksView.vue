@@ -64,7 +64,7 @@ const books = ref([
 
 ])
 
-function showTip() {
+function showInfo() {
   tip.value = 'Eventos: BookCard emite -> BookList re-emite -> BooksView filtra.'
 }
 
