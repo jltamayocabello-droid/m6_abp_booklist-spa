@@ -17,16 +17,11 @@
 </template>
 
 <script setup>
-
-
 const props = defineProps({
-  book: {
-    type: Object,
-    required: true,
-  },
+  book: { type: Object, required: true },
 })
 
-const emit = defineEmits(['book-deleted'])
+const emit = defineEmits(['bookDeleted'])
 
 function categoryClass(category) {
   return {
@@ -39,7 +34,7 @@ function categoryClass(category) {
 }
 
 function handleDelete() {
-  emit('book-deleted', props.book.id)
+  emit('bookDeleted', props.book.id)
 }
 </script>
 
