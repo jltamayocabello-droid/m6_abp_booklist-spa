@@ -16,9 +16,11 @@
 <script setup>
 import BookCard from './BookCard.vue'
 
-const props = defineProps ({
-  books: {type: Array, required: true}
-  
+const props = defineProps({
+  books: {
+    type: Array,
+    default: () => []
+  }
 })
 </script>
 
