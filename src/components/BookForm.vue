@@ -9,7 +9,7 @@
       </label>
       <label class="field">
         <span>Autor *</span>
-        <input v-model.trim="newBook.author" type="text" placeholder="Ej: George Orwell" />
+        <input v-model.trim="newBook.author" type="text" placeholder="Ej: George Orwell" @keydown.enter.prevent @keyup.enter="handleSubmit"/>
       </label>
 
       <label class="field">
