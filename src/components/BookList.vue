@@ -15,18 +15,15 @@
 </template>
 
 <script setup>
-import BookCard from './BookCard.vue';
+import BookCard from './BookCard.vue'
 
 defineProps({
-  books: {
-    type: Array,
-    required: true
-  }
+  books: { type: Array, required: true },
 })
 
 const emit = defineEmits(['bookDeleted'])
 
-function onBookDeleted(id) {
+function forwardDeleted(id) {
   emit('bookDeleted', id)
 }
 
