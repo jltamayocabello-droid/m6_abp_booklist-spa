@@ -3,7 +3,7 @@
 <template>
   <section>
     <header class="header">
-      <h1>Books</h1>
+      <h1>Libros</h1>
       <p>Add and manage your book catalog.</p>
     </header>
 
@@ -14,7 +14,6 @@
     <!-- <BookList :books="books" @bookDeleted="handleBookDeleted" /> -->
   </section>
 </template>
-
 
 <script setup>
 // Lección 3: aquí montaremos <BookForm /> y <BookList />
