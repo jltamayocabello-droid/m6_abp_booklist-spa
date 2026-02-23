@@ -1,17 +1,11 @@
 <template>
+  <section class="card">
+    <h2>Catálogo</h2>
 
-<section class="card">
-<div class="list">
-  <h2>Catálogo</h2>
-  <BookCard 
-  v-for="book in books"
-  :key="book.id"
-  :book="book"
-  @book-deleted="onBookDeleted"
-  />
-</div>
-</section>
-
+    <div class="grid">
+      <BookCard v-for="book in books" :key="book.id" :book="book" @book-deleted="forwardDeleted" />
+    </div>
+  </section>
 </template>
 
 <script setup>
@@ -26,10 +20,17 @@ const emit = defineEmits(['bookDeleted'])
 function forwardDeleted(id) {
   emit('bookDeleted', id)
 }
-
 </script>
 
 <style scoped>
-.card { border: 1px solid #e5e7eb; border-radius: 10px; padding: 16px; }
-.grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
 </style>
