@@ -2,7 +2,7 @@
   <article class="bookCard" :title="`ID: ${props.book.id}`">
     <h3 class="title">{{ props.book.title }}</h3>
     <p class="meta">
-      <span class="author">Autor: {{ props.libro.author }}</span>
+      <span class="author">Autor: {{ props.book.author }}</span>
       <span class="category" :class="categoryClass(props.book.category)"
         >Categoria: {{ props.book.category }}</span
       >
