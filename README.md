@@ -27,3 +27,7 @@ eliminación.
 ● Deben existir al menos 3 vistas: Inicio, Lista de libros y Detalle del libro.
 ● Se debe implementar navegación por rutas, incluyendo rutas dinámicas.
 ● El sistema debe tener comportamiento modular y reutilizable.
+
+
+
+
