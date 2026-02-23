@@ -7,7 +7,9 @@ import BookDetailsView from '../views/BookDetailsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [],
+  routes: [{ path: '/', name: 'home', component: HomeView },
+  { path: '/books', name: 'books', component: BooksView },
+  { path: '/books/:id', name: 'book-details', component: BookDetailsView, props: true }],
 })
 
 export default router
