@@ -1,5 +1,6 @@
 <template>
-  <section class="card">
+<!--
+<section class="card">
     <h2>Catálogo</h2>
 
     <p v-if="props.books.length === 0">No hay libros</p>
@@ -10,18 +11,35 @@
 
 
   </section>
-  
+  -->
+
+<section class="list">
+  <BookCard 
+  v-for="book in books"
+  :key="book.id"
+  :book="book"
+  @book-deleted="onBookDeleted"
+  />
+</section>
+
 </template>
 
 <script setup>
-import BookCard from './BookCard.vue'
+import BookCard from './BookCard.vue';
 
-const props = defineProps({
+defineProps({
   books: {
     type: Array,
-    default: () => []
+    required: true
   }
 })
+
+const emit = defineEmits(['bookDeleted'])
+
+function onBookDeleted(id) {
+  emit('bookDeleted', id)
+}
+
 </script>
 
 <style scoped>
