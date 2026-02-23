@@ -9,7 +9,13 @@
       </label>
       <label class="field">
         <span>Autor *</span>
-        <input v-model.trim="newBook.author" type="text" placeholder="Ej: George Orwell" @keydown.enter.prevent @keyup.enter="handleSubmit"/>
+        <input
+          v-model.trim="newBook.author"
+          type="text"
+          placeholder="Ej: George Orwell"
+          @keydown.enter.prevent
+          @keyup.enter="handleSubmit"
+        />
       </label>
 
       <label class="field">
@@ -78,26 +84,59 @@ function handleSubmit() {
 
   emit('bookCreated', {
     id: crypto.randomUUID(),
-    title: newBook.title.trim(),
-    author: newBook.author.trim(),
+    title: newBook.title,
+    author: newBook.author,
     category: newBook.category,
-    description: newBook.description.trim(),
+    description: newBook.description,
   })
 
   resetForm()
 }
 </script>
 
-
-
 <style scoped>
-.card { border: 1px solid #e5e7eb; border-radius: 10px; padding: 16px; }
-.form { display: grid; gap: 12px; }
-.field { display: grid; gap: 6px; }
-input, select, textarea { padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 8px; }
-.primary { padding: 10px 12px; border: 0; border-radius: 8px; background: #111827; color: white; cursor: pointer; }
-.primary:disabled { opacity: 0.5; cursor: not-allowed; }
-.hint { margin: 0; color: #6b7280; }
-.preview { margin-top: 16px; padding-top: 12px; border-top: 1px solid #e5e7eb; }
-.muted { color: #6b7280; }
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+}
+.form {
+  display: grid;
+  gap: 12px;
+}
+.field {
+  display: grid;
+  gap: 6px;
+}
+input,
+select,
+textarea {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+.primary {
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+}
+.primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.hint {
+  margin: 0;
+  color: #6b7280;
+}
+.preview {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+.muted {
+  color: #6b7280;
+}
 </style>

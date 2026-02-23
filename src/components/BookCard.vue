@@ -1,7 +1,11 @@
 <template>
   <article class="bookCard" :title="`ID: ${props.book.id}`">
     <header class="row">
-      <h3 class="title">{{ props.book.title }}</h3>
+      <h3 class="title">
+        <RouterLink class="titleLink" :to="{ name: 'book-details', params: { id: props.book.id } }">
+          {{ props.book.title }}
+        </RouterLink>
+      </h3>
       <button type="button" class="danger" @click="handleDelete">Eliminar</button>
     </header>
 
@@ -17,6 +21,8 @@
 </template>
 
 <script setup>
+import { RouterLink } from 'vue-router'
+
 const props = defineProps({
   book: { type: Object, required: true },
 })
@@ -52,6 +58,13 @@ function handleDelete() {
 }
 .title {
   margin: 0 0 6px;
+}
+.titleLink {
+  text-decoration: none;
+  color: inherit;
+}
+.titleLink:hover {
+  text-decoration: underline;
 }
 .meta {
   margin: 0;
