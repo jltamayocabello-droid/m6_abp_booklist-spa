@@ -4,10 +4,12 @@
       <h1>Lista de Libros</h1>
       <p>Administra tu catálogo: agrega libros y revisa el listado.</p>
 
+    <!--
       <button type="button" @click.once="showInfo" :disabled="tipShown" class="tip-btn">
         {{ tipShown ? 'Tip mostrado ✓' : 'Ver tip de uso' }}
       </button>
-      <small v-if="tip">{{ tip }}</small>
+      
+      <small v-if="tip">{{ tip }}</small>-->
     </header>
 
     <BookForm v-if="loginStore.currentUser?.admin" @book-created="handleBookCreated" />
