@@ -1,7 +1,7 @@
 import { ref, watch } from 'vue'
 import { defineStore } from 'pinia'
 
-const STORAGE_KEY = 'booklist-books'
+const STORAGE_KEY = 'booklist-books-v2'
 
 const defaultBooks = [
   {
@@ -9,6 +9,7 @@ const defaultBooks = [
     title: 'Cien años de soledad',
     author: 'Gabriel García Márquez',
     category: 'Ficción',
+    cover: 'https://covers.openlibrary.org/b/isbn/9780060883287-M.jpg',
     description:
       'La historia multi-generacional de la familia Buendía en el pueblo místico de Macondo.',
   },
@@ -17,22 +18,25 @@ const defaultBooks = [
     title: '1984',
     author: 'George Orwell',
     category: 'Distopía',
+    cover: 'https://covers.openlibrary.org/b/isbn/9780451524935-M.jpg',
     description:
       'Una visión aterradora de un estado totalitario donde el pensamiento libre está prohibido.',
   },
   {
     id: crypto.randomUUID(),
-    title: 'Interstellar',
-    author: 'Christopher Nolan',
+    title: 'El marciano',
+    author: 'Andy Weir',
     category: 'Ciencia',
+    cover: 'https://covers.openlibrary.org/b/isbn/9780553418026-M.jpg',
     description:
-      'Un grupo de astronautas viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad.',
+      'Un astronauta queda abandonado en Marte y debe usar sus conocimientos científicos para sobrevivir hasta que llegue un rescate.',
   },
   {
     id: crypto.randomUUID(),
     title: 'Sapiens',
     author: 'Yuval Noah Harari',
     category: 'No Ficción',
+    cover: 'https://covers.openlibrary.org/b/isbn/9780062316097-M.jpg',
     description:
       'Un recorrido por la historia de la humanidad, desde los primeros humanos hasta los avances del siglo XXI.',
   },
@@ -41,6 +45,7 @@ const defaultBooks = [
     title: 'Breve historia del tiempo',
     author: 'Stephen Hawking',
     category: 'Historia',
+    cover: 'https://covers.openlibrary.org/b/isbn/9780553380163-M.jpg',
     description:
       'Una exploración de los orígenes del universo, los agujeros negros y la naturaleza del tiempo.',
   },
