@@ -8,15 +8,17 @@ const loginStore = useLoginStore()
 
 const form = ref({ email: 'pedro@gmail.com', password: '123456' })
 const errorMsg = ref('')
+const successMsg = ref('')
 
 async function handleSubmit() {
   errorMsg.value = ''
+  successMsg.value = ''
   const result = loginStore.login(form.value.email, form.value.password)
   if (result.success) {
-    router.push({
-      name: 'home',
-      params: { message: '¡Sesión iniciada con éxito!', color: 'success' },
-    })
+    successMsg.value = `¡Bienvenido/a, ${loginStore.currentUser.nombre}!`
+    setTimeout(() => {
+      router.push({ name: 'home' })
+    }, 1500)
   } else {
     errorMsg.value = result.error
   }
@@ -46,9 +48,10 @@ async function handleSubmit() {
           />
         </div>
 
+        <p v-if="successMsg" class="success-msg" role="status">{{ successMsg }}</p>
         <p v-if="errorMsg" class="error-msg" role="alert">{{ errorMsg }}</p>
 
-        <button type="submit" class="btn-login">Entrar</button>
+        <button type="submit" class="btn-login" :disabled="Boolean(successMsg)">Entrar</button>
       </form>
     </div>
   </section>
@@ -117,6 +120,29 @@ input:focus {
   color: #dc2626;
   font-size: 0.875rem;
   margin: 0;
+}
+
+.success-msg {
+  color: #166534;
+  background: #dcfce7;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .btn-login {

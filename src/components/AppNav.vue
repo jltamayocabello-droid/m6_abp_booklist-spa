@@ -16,16 +16,16 @@
 <script setup>
 import { RouterLink, useRouter } from 'vue-router'
 import { useLoginStore } from '../stores/login.store.js'
+import { useFlashStore } from '../stores/flash.store.js'
 
 const router = useRouter()
 const loginStore = useLoginStore()
+const flashStore = useFlashStore()
 
 function logout() {
   loginStore.$reset()
-  router.push({
-    name: 'home',
-    params: { message: 'Sesión cerrada correctamente.', color: 'success' },
-  })
+  flashStore.show('Sesión cerrada correctamente.', 'error')
+  router.push({ name: 'home' })
 }
 </script>
 

@@ -10,10 +10,6 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
-      props: (route) => ({
-        message: route.params.message ?? '',
-        color: route.params.color ?? '',
-      }),
     },
     {
       path: '/login',

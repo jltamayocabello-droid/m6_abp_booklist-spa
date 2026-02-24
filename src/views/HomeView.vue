@@ -1,7 +1,7 @@
 <template>
   <section class="home">
-    <div v-if="visible && message" class="flash" :class="`flash-${color}`" role="alert">
-      {{ message }}
+    <div v-if="visible" class="flash" :class="`flash-${flashStore.color}`" role="alert">
+      {{ flashStore.message }}
     </div>
 
     <div class="logo-wrap" aria-hidden="true">
@@ -35,21 +35,22 @@
 
 <script setup>
 import { ref, watch } from 'vue'
+import { useFlashStore } from '../stores/flash.store.js'
 import logo from '@/assets/logo-editorial-nova.svg'
 
-const props = defineProps({
-  message: { type: String, default: '' },
-  color: { type: String, default: 'success' },
-})
+const flashStore = useFlashStore()
 
-const visible = ref(Boolean(props.message))
+const visible = ref(false)
 
 watch(
-  () => props.message,
+  () => flashStore.message,
   (val) => {
     if (val) {
       visible.value = true
-      setTimeout(() => (visible.value = false), 3000)
+      setTimeout(() => {
+        visible.value = false
+        flashStore.clear()
+      }, 3000)
     }
   },
   { immediate: true },
