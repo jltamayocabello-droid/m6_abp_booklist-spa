@@ -1,14 +1,14 @@
 <template>
   <nav class="nav">
     <RouterLink class="navLink" :to="{ name: 'home' }">Inicio</RouterLink>
-    <RouterLink class="navLink" :to="{ name: 'books' }">Catalogo de Libros</RouterLink>
+    <RouterLink class="navLink" :to="{ name: 'books' }">Catálogo de Libros</RouterLink>
 
     <template v-if="loginStore.sesion">
       <RouterLink class="navLink" :to="{ name: 'profile' }">Perfil</RouterLink>
       <button class="navBtn" @click="logout">Cerrar sesión</button>
     </template>
     <template v-else>
-      <RouterLink class="navLink" :to="{ name: 'login' }">Inicio de Sesión</RouterLink>
+      <RouterLink class="navLink" :to="{ name: 'login' }">Iniciar Sesión</RouterLink>
     </template>
   </nav>
 </template>

@@ -1,5 +1,35 @@
+<template>
+  <section class="home">
+    <div v-if="visible && message" class="flash" :class="`flash-${color}`" role="alert">
+      {{ message }}
+    </div>
+    <img :src="logo" alt="Editorial Nova" height="200" />
+    <h1>Presentación</h1>
+    <p>
+      <strong>Editorial Nova</strong> es una editorial enfocada en modernizar la gestión de su
+      catálogo mediante una experiencia web clara, rápida y profesional, pensada para registrar,
+      organizar y consultar libros de forma sencilla.
+    </p>
+    <p>En esta plataforma podrás:</p>
+    <ul>
+      <li>Agregar libros con información esencial (título, autor y categoría).</li>
+      <li>Visualizar el catálogo en una lista dinámica y ordenada.</li>
+      <li>Filtrar rápidamente por autor o categoría para encontrar lo que necesitas.</li>
+      <li>
+        Consultar el detalle de cada libro y mantener el catálogo actualizado eliminando registros
+        cuando corresponda.
+      </li>
+    </ul>
+    <p>
+      El objetivo de la web es ofrecer una navegación fluida entre secciones y una interfaz modular
+      y escalable, que sirva como base para futuras mejoras y nuevas funcionalidades.
+    </p>
+  </section>
+</template>
+
 <script setup>
 import { ref, watch } from 'vue'
+import logo from '@/assets/logo-editorial-nova.svg'
 
 const props = defineProps({
   message: { type: String, default: '' },
@@ -19,17 +49,6 @@ watch(
   { immediate: true },
 )
 </script>
-
-<template>
-  <section class="home">
-    <div v-if="visible && message" class="flash" :class="`flash-${color}`" role="alert">
-      {{ message }}
-    </div>
-
-    <h1>BookList</h1>
-    <p>Bienvenido. Usa la barra de navegación para gestionar tus libros.</p>
-  </section>
-</template>
 
 <style scoped>
 .home {

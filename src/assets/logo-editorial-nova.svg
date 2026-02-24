@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="240" viewBox="0 0 960 240" role="img" aria-label="Editorial Nova">
+  <defs>
+    <style>
+      .ink { fill:#071A2B; }      /* azul marino muy oscuro */
+      .gold { fill:#D4AF37; }     /* dorado alto contraste */
+      .word { fill:#071A2B; font: 700 66px/1.05 "Georgia", "Times New Roman", Times, serif; letter-spacing: .6px; }
+      .small { fill:#071A2B; font: 600 18px/1.2 "Georgia", "Times New Roman", Times, serif; letter-spacing: 6px; opacity:.85; }
+    </style>
+  </defs>
+
+  <!-- Emblema (sello editorial) -->
+  <g transform="translate(70,38)">
+    <!-- Marco circular -->
+    <circle cx="82" cy="82" r="74" fill="none" stroke="#071A2B" stroke-width="10"/>
+    <circle cx="82" cy="82" r="60" fill="none" stroke="#D4AF37" stroke-width="6"/>
+
+    <!-- Libro clásico -->
+    <path class="ink" d="M44 68c0-10 8-18 18-18h20c10 0 18 8 18 18v72c-10-6-22-6-34-2l-22 7V68z"/>
+    <path class="ink" d="M120 68c0-10-8-18-18-18H82c-10 0-18 8-18 18v72c10-6 22-6 34-2l22 7V68z"/>
+    <rect x="78" y="56" width="8" height="104" class="gold" rx="4"/>
+
+    <!-- Nova (estrella pequeña arriba) -->
+    <path class="gold" d="M82 30l6 14 14 6-14 6-6 14-6-14-14-6 14-6z"/>
+  </g>
+
+  <!-- Wordmark clásico -->
+  <text x="240" y="115" class="word">Editorial Nova</text>
+  <!-- Línea fina dorada para “toque clásico” -->
+  <rect x="242" y="135" width="640" height="3" class="gold" rx="2"/>
+  <!-- (Sin “catálogo de libros”) -->
+  <text x="244" y="175" class="small">Fundada en 1998</text>
+</svg>
