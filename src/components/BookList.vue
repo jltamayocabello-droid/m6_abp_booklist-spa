@@ -1,6 +1,7 @@
 <template>
   <section class="card">
-    <h2>Catálogo</h2>
+    <h2>Catálogo de Libros</h2>
+    <p>Todos los libros disponibles en el stock de la editorial:</p>
 
     <div class="grid">
       <BookCard v-for="book in books" :key="book.id" :book="book" @book-deleted="forwardDeleted" />

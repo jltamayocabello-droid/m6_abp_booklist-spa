@@ -36,6 +36,7 @@ function logout() {
   padding: 12px 16px;
   border-bottom: 1px solid #e5e7eb;
   align-items: center;
+  justify-content: space-evenly;
 }
 .navLink {
   text-decoration: none;

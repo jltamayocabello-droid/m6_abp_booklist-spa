@@ -3,7 +3,12 @@
     <div v-if="visible && message" class="flash" :class="`flash-${color}`" role="alert">
       {{ message }}
     </div>
-    <img :src="logo" alt="Editorial Nova" height="200" />
+    <div class="logo-wrap" aria-hidden="true">
+      <img class="logo" :src="logo" alt="Editorial Nova" />
+    </div>
+    
+  </section>
+  <section class="card">
     <h1>Presentación</h1>
     <p>
       <strong>Editorial Nova</strong> es una editorial enfocada en modernizar la gestión de su
@@ -24,7 +29,7 @@
       El objetivo de la web es ofrecer una navegación fluida entre secciones y una interfaz modular
       y escalable, que sirva como base para futuras mejoras y nuevas funcionalidades.
     </p>
-  </section>
+    </section>
 </template>
 
 <script setup>

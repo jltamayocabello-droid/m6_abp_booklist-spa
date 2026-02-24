@@ -1,6 +1,7 @@
 <template>
   <section class="card">
     <h2>Agregar Libro</h2>
+    <p>Administra tu catálogo: puedes agregar o eliminar libros, y ver su vista previa.</p>
 
     <form class="form" @submit.prevent="handleSubmit">
       <label class="field">

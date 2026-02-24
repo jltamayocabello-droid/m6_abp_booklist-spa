@@ -1,10 +1,13 @@
 <template>
   <section class="page">
     <header class="header">
-      <h1>Lista de Libros</h1>
-      <p>Administra tu catálogo: agrega libros y revisa el listado.</p>
+      <div class="logo-wrap" aria-hidden="true">
+      <img class="logo" :src="logo" alt="Editorial Nova" />
+    </div>
+      
 
     <!--
+
       <button type="button" @click.once="showInfo" :disabled="tipShown" class="tip-btn">
         {{ tipShown ? 'Tip mostrado ✓' : 'Ver tip de uso' }}
       </button>
@@ -24,6 +27,7 @@ import BookForm from '../components/BookForm.vue'
 import BookList from '../components/BookList.vue'
 import { useBookStore } from '../stores/books.js'
 import { useLoginStore } from '../stores/login.store.js'
+import logo from '@/assets/logo-editorial-nova.svg'
 
 const store = useBookStore()
 const loginStore = useLoginStore()
