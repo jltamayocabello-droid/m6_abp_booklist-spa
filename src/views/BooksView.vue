@@ -10,7 +10,7 @@
       <small v-if="tip">{{ tip }}</small>
     </header>
 
-    <BookForm @book-created="handleBookCreated" />
+    <BookForm v-if="loginStore.currentUser?.admin" @book-created="handleBookCreated" />
 
     <BookList :books="store.books" @book-deleted="handleBookDeleted" />
   </section>
@@ -21,8 +21,10 @@ import { ref } from 'vue'
 import BookForm from '../components/BookForm.vue'
 import BookList from '../components/BookList.vue'
 import { useBookStore } from '../stores/books.js'
+import { useLoginStore } from '../stores/login.store.js'
 
 const store = useBookStore()
+const loginStore = useLoginStore()
 
 const tip = ref('')
 const tipShown = ref(false)

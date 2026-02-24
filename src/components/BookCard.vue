@@ -6,7 +6,14 @@
           {{ props.book.title }}
         </RouterLink>
       </h3>
-      <button type="button" class="danger" @click="handleDelete">Eliminar</button>
+      <button
+        v-if="loginStore.currentUser?.admin"
+        type="button"
+        class="danger"
+        @click="handleDelete"
+      >
+        Eliminar
+      </button>
     </header>
 
     <p class="meta">
@@ -22,6 +29,9 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
+import { useLoginStore } from '../stores/login.store.js'
+
+const loginStore = useLoginStore()
 
 const props = defineProps({
   book: { type: Object, required: true },
