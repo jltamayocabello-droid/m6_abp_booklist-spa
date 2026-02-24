@@ -46,7 +46,6 @@ function logout() {
   font-weight: 600;
 }
 .navBtn {
-  margin-left: auto;
   padding: 4px 12px;
   background: transparent;
   border: 1px solid #d1d5db;

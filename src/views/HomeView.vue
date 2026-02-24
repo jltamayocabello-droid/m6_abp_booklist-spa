@@ -3,33 +3,34 @@
     <div v-if="visible && message" class="flash" :class="`flash-${color}`" role="alert">
       {{ message }}
     </div>
+
     <div class="logo-wrap" aria-hidden="true">
       <img class="logo" :src="logo" alt="Editorial Nova" />
     </div>
-    
+
+    <div class="presentation">
+      <h1>Presentación</h1>
+      <p>
+        <strong>Editorial Nova</strong> es una editorial enfocada en modernizar la gestión de su
+        catálogo mediante una experiencia web clara, rápida y profesional, pensada para registrar,
+        organizar y consultar libros de forma sencilla.
+      </p>
+      <p>En esta plataforma podrás:</p>
+      <ul>
+        <li>Agregar libros con información esencial (título, autor y categoría).</li>
+        <li>Visualizar el catálogo en una lista dinámica y ordenada.</li>
+        <li>Filtrar rápidamente por autor o categoría para encontrar lo que necesitas.</li>
+        <li>
+          Consultar el detalle de cada libro y mantener el catálogo actualizado eliminando registros
+          cuando corresponda.
+        </li>
+      </ul>
+      <p>
+        El objetivo de la web es ofrecer una navegación fluida entre secciones y una interfaz
+        modular y escalable, que sirva como base para futuras mejoras y nuevas funcionalidades.
+      </p>
+    </div>
   </section>
-  <section class="card">
-    <h1>Presentación</h1>
-    <p>
-      <strong>Editorial Nova</strong> es una editorial enfocada en modernizar la gestión de su
-      catálogo mediante una experiencia web clara, rápida y profesional, pensada para registrar,
-      organizar y consultar libros de forma sencilla.
-    </p>
-    <p>En esta plataforma podrás:</p>
-    <ul>
-      <li>Agregar libros con información esencial (título, autor y categoría).</li>
-      <li>Visualizar el catálogo en una lista dinámica y ordenada.</li>
-      <li>Filtrar rápidamente por autor o categoría para encontrar lo que necesitas.</li>
-      <li>
-        Consultar el detalle de cada libro y mantener el catálogo actualizado eliminando registros
-        cuando corresponda.
-      </li>
-    </ul>
-    <p>
-      El objetivo de la web es ofrecer una navegación fluida entre secciones y una interfaz modular
-      y escalable, que sirva como base para futuras mejoras y nuevas funcionalidades.
-    </p>
-    </section>
 </template>
 
 <script setup>
@@ -61,8 +62,35 @@ watch(
   gap: 16px;
 }
 
-h1 {
-  margin: 0 0 4px;
+.logo-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+}
+
+.logo {
+  height: 64px;
+  width: auto;
+}
+
+.presentation {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.presentation h1 {
+  margin: 0 0 12px;
+}
+
+.presentation ul {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.presentation li {
+  margin-bottom: 4px;
+  color: #374151;
 }
 
 .flash {
