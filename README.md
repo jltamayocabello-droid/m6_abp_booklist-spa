@@ -195,19 +195,7 @@ npm run dev
 
 **Deploy (GitHub Pages):** 🔗 **[https://jltamayocabello-droid.github.io/m6_abp_booklist-spa/](https://jltamayocabello-droid.github.io/m6_abp_booklist-spa/)**
 
-**Deploy (Vercel):** 🔗 **[https://m6-abp-proyecto-final.vercel.app/](https://m6-abp-proyecto-final.vercel.app/)** (Configurado para SPA)
-
-### Configuración para Vercel
-
-Para que el enrutamiento de la SPA funcione correctamente en Vercel, se ha añadido un archivo `vercel.json` en la raíz del proyecto:
-
-```json
-{
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
-}
-```
-
-Además, se ha ajustado el `base` en `vite.config.js` a `'/'` para despliegues en el dominio raíz.
+**Deploy (Vercel):** 🔗 **[https://m6-abp-proyecto-final.vercel.app/](https://m6-abp-proyecto-final.vercel.app/)** 
 
 ---
 
