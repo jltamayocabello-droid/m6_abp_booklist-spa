@@ -6,7 +6,7 @@ import { useLoginStore } from '../stores/login.store.js'
 const router = useRouter()
 const loginStore = useLoginStore()
 
-const form = ref({ email: 'pedro@gmail.com', password: '123456' })
+const form = ref({ email: 'admin@admin.com', password: 'admin' })
 const errorMsg = ref('')
 const successMsg = ref('')
 
