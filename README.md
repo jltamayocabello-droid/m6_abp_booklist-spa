@@ -1,8 +1,10 @@
 # 📝 PROYECTO ABP M6: BookList SPA
 
+
 ![Estado del Proyecto](https://img.shields.io/badge/Estado-Finalizado-yellow)
 ![Stack](https://img.shields.io/badge/Stack-Vue.js_3_%7C_Vite_%7C_Pinia-brightgreen)
 ![Router](https://img.shields.io/badge/Vue_Router-4.x-blue)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
 
 ---
 
@@ -193,9 +195,11 @@ npm run dev
 
 **Repositorio GitHub:** 🔗 **[https://github.com/jltamayocabello-droid/m6_abp_booklist-spa](https://github.com/jltamayocabello-droid/m6_abp_booklist-spa)**
 
-**Deploy (GitHub Pages):** 🔗 **[https://jltamayocabello-droid.github.io/m6_abp_booklist-spa/](https://jltamayocabello-droid.github.io/m6_abp_booklist-spa/)**
+**Deploy Vercel (Recomendado):** 🔗 **[https://m6-abp-proyecto-final.vercel.app/](https://m6-abp-proyecto-final.vercel.app/)**
 
-**Deploy (Vercel):** 🔗 **[https://m6-abp-proyecto-final.vercel.app/](https://m6-abp-proyecto-final.vercel.app/)**
+[![Deploy with Vercel](https://vercel.com/button)](https://m6-abp-proyecto-final.vercel.app/)
+
+**Deploy GitHub Pages:** 🔗 **[https://jltamayocabello-droid.github.io/m6_abp_booklist-spa/](https://jltamayocabello-droid.github.io/m6_abp_booklist-spa/)**
 
 ---
 
