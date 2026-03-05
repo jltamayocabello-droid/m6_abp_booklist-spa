@@ -195,7 +195,7 @@ npm run dev
 
 **Deploy (GitHub Pages):** 🔗 **[https://jltamayocabello-droid.github.io/m6_abp_booklist-spa/](https://jltamayocabello-droid.github.io/m6_abp_booklist-spa/)**
 
-**Deploy (Vercel):** 🔗 **[https://m6-abp-proyecto-final.vercel.app/](https://m6-abp-proyecto-final.vercel.app/)** 
+**Deploy (Vercel):** 🔗 **[https://m6-abp-proyecto-final.vercel.app/](https://m6-abp-proyecto-final.vercel.app/)**
 
 ---
 
@@ -286,6 +286,8 @@ Para verificar el correcto funcionamiento:
 - [pinia-plugin-persistedstate](https://prazdevs.github.io/pinia-plugin-persistedstate/)
 - [Open Library Covers API](https://openlibrary.org/dev/docs/api#anchor_covers)
 - [MDN Web Docs - Crypto.randomUUID()](https://developer.mozilla.org/es/docs/Web/API/Crypto/randomUUID)
+- [Shields.io - Badges Informativos](https://shields.io/)
+- [Inter Font - Google Fonts](https://fonts.google.com/specimen/Inter)
 
 ---
 
@@ -305,6 +307,8 @@ Este proyecto es parte de un trabajo académico para SENCE y está disponible co
 
 ## 🙏 Agradecimientos
 
-- **SENCE** por la formación en desarrollo Front-End
-- **Open Library** por proporcionar portadas de libros de forma gratuita
-- **Comunidad Vue.js** por la documentación exhaustiva del framework
+- **SENCE** por la formación en desarrollo Front-End.
+- **Open Library** por proporcionar portadas de libros de forma gratuita.
+- **Comunidad Vue.js, Vite y Pinia** por la documentación exhaustiva y las herramientas del ecosistema.
+- **Shields.io** por los badges de estado del proyecto.
+- **Google Fonts** por la tipografía Inter.
