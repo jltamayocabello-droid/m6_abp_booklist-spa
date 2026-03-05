@@ -195,9 +195,7 @@ npm run dev
 
 **Repositorio GitHub:** 🔗 **[https://github.com/jltamayocabello-droid/m6_abp_booklist-spa](https://github.com/jltamayocabello-droid/m6_abp_booklist-spa)**
 
-**Deploy Vercel (Recomendado):** 🔗 **[https://m6-abp-proyecto-final.vercel.app/](https://m6-abp-proyecto-final.vercel.app/)**
-
-[![Deploy with Vercel](https://vercel.com/button)](https://m6-abp-proyecto-final.vercel.app/)
+**Deploy Vercel (Recomendado):** 🔗 **[https://m6-abp-booklist-spa.vercel.app/](https://m6-abp-booklist-spa.vercel.app/)**
 
 **Deploy GitHub Pages:** 🔗 **[https://jltamayocabello-droid.github.io/m6_abp_booklist-spa/](https://jltamayocabello-droid.github.io/m6_abp_booklist-spa/)**
 
